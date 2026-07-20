@@ -1,0 +1,7 @@
+interface:
+  display_name: "Daily Report Skill"
+  short_description: "Generate local daily Codex conversation summaries."
+  default_prompt: "Use $daily-report to check or generate today's Codex conversation report."
+
+policy:
+  allow_implicit_invocation: false
