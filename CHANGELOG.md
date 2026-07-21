@@ -1,5 +1,23 @@
 # Changelog
 
+## 2026-07-21 — 发布 README 重写
+
+- README 改为面向 Codex 使用者的发布入口：快速安装、显式调用、Scheduled 配置、输出目录、范围与隐私边界及 Windows 编码注意事项。
+- 采用“价值主张 → 快速开始 → 日常使用 → 输出 → 边界”的简洁结构，参考 `mattpocock/skills` 的可组合、可改造 README 风格，但未复制其内容。
+- 根据阅读反馈移除仓库地图和 QiClaw 定位句，并将“自己改造它”明确为面向 fork 开发者的可选自定义说明。
+- 快速开始新增“交给 IDE”安装路径，并加入 MIT 使用告示与发布前保留正式 `LICENSE` 文件的提醒。
+
+## 2026-07-21 — briefing 链接回复
+
+- `$daily-report` 的最终回复改为仅呈现生成状态、覆盖/失败数与 briefing。
+- briefing 使用 Codex Desktop 可点击的绝对本地 Markdown 链接，并在下一行保留同一路径的纯文本回退；不再链接 manifest 或 status。
+- 此行为写入 skill 与运行契约，不依赖某一条 Scheduled prompt；README 重写仍留待后续讨论。
+
+## 2026-07-20 — 记录下一轮发布体验讨论
+
+- README 暂不在本轮改写；下一轮先确认 GitHub 分发面向的读者与文档结构。
+- 记录日报输出路径应在支持的 Codex 客户端中以可点击本地链接返回，并保留其他客户端可复制的纯文本回退。
+
 ## 2026-07-20 — 修复新建 Scheduled 缺失自身 session ID
 
 - 不再因新 Scheduled 任务的初始上下文缺少 `memory.md` 或自身 session ID 而安全停止。

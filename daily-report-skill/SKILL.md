@@ -74,6 +74,13 @@ Use this branch for `$daily-report` and for the weekday scheduled job.
 8. Write only to the configured report root and record run metadata. The default is
    `%LOCALAPPDATA%\\daily-report-skill`; expand `DAILY_REPORT_ROOT` when it is set.
    Pass `--report-root` only for an explicit caller-provided override.
+9. In the final user-facing reply, provide only the generation status, covered-session
+   count, failed-session count, and the briefing. Render the briefing as a clickable
+   Codex Desktop local Markdown link using its absolute path, for example
+   `[打开日报](C:/Users/<user>/AppData/Local/daily-report-skill/briefings/YYYY-MM-DD.md)`.
+   On the following line retain the same absolute briefing path as plain text for
+   clients that do not render local links. Do not link the manifest or status file in
+   the normal reply.
 
 Do not read a session's whole history in this branch. Apart from the one existing
 prior-date `SNAPSHOT` reconciliation above, do not read prior-date content. Do not use Chromium data under

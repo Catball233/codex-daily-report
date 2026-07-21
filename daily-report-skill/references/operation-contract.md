@@ -69,6 +69,14 @@ Under that root, write:
 - `briefings/YYYY-MM-DD.md` for the daily rollup.
 - `status/YYYY-MM-DD.json` for success, failure, and recovery metadata.
 
+## Reply policy
+
+The final user-facing reply reports generation status, covered-session count,
+failed-session count, and the briefing only. Present the briefing as a clickable
+Codex Desktop local Markdown link whose target is the absolute briefing path, then
+include that same path as plain text on the following line for clients that do not
+render local links. Do not normally link the manifest or status file.
+
 The status file also records `phase`, `snapshot_generated_at`, `last_reconciled_at`,
 `finalized_at`, `source_watermarks`, and `excluded_automation_session_ids`. These values
 are structural metadata only and must not contain message text.
